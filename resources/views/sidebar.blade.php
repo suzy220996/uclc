@@ -29,6 +29,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>DASHBOARD</span></a></li>
+        <li><a href="#/test"><i class="fa fa-folder"></i> <span>SAMPLE ANGULAR PAGE</span></a></li>
         <li><a href="#"><i class="fa fa-folder"></i> <span>UTEPT</span></a></li>
         <li><a href="#"><i class="fa fa-folder"></i> <span>UCEPT</span></a></li>
         <li><a href="#"><i class="fa fa-folder"></i> <span>TOEIC</span></a></li>

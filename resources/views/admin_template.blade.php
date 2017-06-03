@@ -3,7 +3,8 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html>
+<!--2. memberi tahu HTML modul apa yang digunakan-->
+<html ng-app="uclc">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,9 +34,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  
+  
+  <!--angular library-->
+  <script type='text/javascript' src="angular/plugins/angular/angular.js"></script>
+  <!--untuk akses web service-->
+  <script type='text/javascript'  src="angular/plugins/angular/ocLazyLoad.min.js"></script>
+  <!--untuk routing single page-->
+  <script type='text/javascript' src="angular/plugins/angular-ui-router/release/angular-ui-router.js"></script>  
+  <!--untuk akses web service-->
+  <script type='text/javascript' src="angular/plugins/angular/angular-resource.js"></script>
+
+
+  <!--routing config-->
+  <script type='text/javascript' src="angular/route.js"></script>
+
 </head>
 
-<body class="hold-transition skin-black sidebar-mini">
+<body class="hold-transition skin-black sidebar-mini" ng-controller="mastercontroller">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -56,9 +72,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <section class="content container-fluid" ui-view>
 
-       @yield('content')
+       <!--@yield('content')-->
     </section>
     <!-- /.content -->
   </div>
@@ -175,5 +191,13 @@ $(document).ready(function()
 });
 
 </script>
+    <!--service-->
+<script src="angular/services/common.service.js"></script>
+<script src="angular/services/utepResource.js"></script>
+
+
+    <!--controller-->
+<script src="angular/controllers/Master.js"></script>
+<script src="angular/controllers/test-ctrl.js"></script>
 </body>
 </html>
